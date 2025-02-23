@@ -6,7 +6,7 @@ html {
 .cool-box {
     width: 200px; /* Reasonable width for the box */
     height: 150px; /* Reasonable height for the box */
-    background-color: #4CAF50; /* Base color for the design */
+    background-color: red; /* Base color for the design */
     color: white; /* Contrasting color for the text */
     font-size: 1.125rem; /* Slight increase in font size (1rem = 16px, so 1.125rem ≈ 18px) */
     text-align: center; /* Center the text horizontally */
@@ -30,4 +30,15 @@ html {
 
     /* Standard box shadow for a raised effect */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* Inset shadows and text shadow for the fancy box */
+.fancy-box {
+    /* Inset shadows for 3D effect */
+    box-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.3), /* Standard shadow */
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3), /* Semi-transparent white shadow at top-left */
+        inset -2px -2px 4px rgba(0, 0, 0, 0.3); /* Semi-transparent black shadow at bottom-right */
+
+    /* Text shadow for better readability */
+    text-shadow: 1px 1px 2px black; /* Black text shadow for contrast */
 }
