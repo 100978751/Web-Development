@@ -49,3 +49,14 @@ body {
   .feature {
       width: 200px;
   }
+  /* Navigation and sticky header */
+nav ul {
+    display: flex;
+    justify-content: space-between; /* Equal space between navigation items */
+  }
+  
+  nav {
+    position: sticky;
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures the nav stays above other content */
+  }
