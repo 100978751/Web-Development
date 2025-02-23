@@ -1,89 +1,180 @@
-/* General setup */
-
+/* Apply border-box sizing to all elements */
 * {
     box-sizing: border-box;
   }
   
+  /* Base styles for the body */
   body {
-    margin: 0 auto;
-    min-width: 1000px;
-    max-width: 1400px;
+    margin: 0 auto; /* Center the content horizontally */
+    min-width: 1000px; /* Minimum width of the page */
+    max-width: 1400px; /* Maximum width of the page */
   }
   
-  /* Layout */
-  
+  /* Layout styles for sections, aside, and nav */
   section {
-    float: left;
-    width: 50%;
+    float: left; /* Float the section to the left */
+    width: 50%; /* Set width to 50% of the container */
   }
   
   aside {
-    float: left;
-    width: 30%;
+    float: left; /* Float the aside to the left */
+    width: 30%; /* Set width to 30% of the container */
   }
   
   nav {
-    float: left;
-    width: 20%;
+    float: left; /* Float the nav to the left */
+    width: 20%; /* Set width to 20% of the container */
   }
   
+  /* Clear floats for the footer */
   footer {
-    clear: both;
+    clear: both; /* Ensure the footer is below floated elements */
   }
   
+  /* Add padding to all layout elements */
   header, section, aside, nav, footer {
     padding: 20px;
   }
   
-  /* header and footer */
-  
+  /* Header and footer styling */
   header, footer {
-    border-top: 5px solid #a66;
-    border-bottom: 5px solid #a66;
+    border-top: 5px solid #a66; /* Add a top border */
+    border-bottom: 5px solid #a66; /* Add a bottom border */
   }
   
-  /* Font and text styling */
-
-/* Fonts */
-@font-face {
-    font-family: 'SerifFont';
-    src: url('serif-font.woff2') format('woff2'),
-         url('serif-font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SansSerifFont';
-    src: url('sans-serif-font.woff2') format('woff2'),
-         url('sans-serif-font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'SerifFont', serif; /* Apply serif font to body */
-}
-
-h1, h2 {
-    font-family: 'SansSerifFont', sans-serif; /* Apply sans-serif font to headings */
-    letter-spacing: 1px; /* Allow headings to breathe */
-}
-
-h1 {
-    font-size: 2.4rem; /* Larger font size for h1 */
-    text-align: center; /* Center the top-level heading */
-}
-
-h2 {
-    font-size: 1.8rem; /* Larger font size for h2 */
-}
-
-p {
-    letter-spacing: 0.5px; /* Letter spacing for body text */
-    word-spacing: 1px; /* Word spacing for body text */
-}
-
-section p:first-of-type {
-    text-indent: 20px; /* Indent first paragraph after each heading */
-}
+  /* Additional header and footer styles */
+  header, footer {
+    width: 100%; /* Full width */
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Custom font for headings */
+  @font-face {
+    font-family: 'Sigmar';
+    src: url(./Fonts/Sigmar/Sigmar-Regular.ttf) format('truetype'); /* Path to the font file */
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+  }
+  
+  /* Custom font for body text */
+  @font-face {
+    font-family: 'Atkinson_Hyperlegible_Mono';
+    src: url(./Fonts/Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-VariableFont_wght.ttf) format('truetype'); /* Path to the font file */
+    font-weight: normal; /* Normal font weight */
+    font-style: bold; /* Bold font style */
+  }
+  
+  /* Base font styles for the HTML */
+  html {
+    font-family: 'Atkinson_Hyperlegible_Mono', sans-serif; /* Use Atkinson Hyperlegible Mono as the primary font */
+    font-size: 16px; /* Set base font size */
+  }
+  
+  /* Heading styles */
+  h1, h2 {
+    font-family: 'Sigmar', sans-serif; /* Use Sigmar as the font for headings */
+    text-align: center; /* Center-align headings */
+  }
+  
+  /* Paragraph and list item styles */
+  p, li {
+    line-height: 1.5; /* Set line height for better readability */
+  }
+  
+  /* Level 1 heading styles */
+  h1 {
+    font-size: 2em; /* Set font size */
+    letter-spacing: 0.2em; /* Add letter spacing */
+  }
+  
+  /* Level 2 heading styles */
+  h2 {
+    font-size: 1.5em; /* Set font size */
+    letter-spacing: 0.1em; /* Add letter spacing */
+  }
+  
+  /* Indent the first line of paragraphs in the section */
+  section p {
+    text-indent: 2.5em; /* Add text indentation */
+  }
+  
+  /* Remove text indentation for paragraphs in the aside */
+  aside p {
+    text-indent: 0em; /* No text indentation */
+  }
+  
+  /* Link styles */
+  a {
+    text-decoration: underline; /* Underline links by default */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Remove underline on hover and focus */
+  a:hover, a:focus {
+    text-decoration: none; /* No underline */
+  }
+  
+  /* Link states */
+  a:link { color: #0000EE; } /* Default link color */
+  a:visited { color: #551A8B; } /* Visited link color */
+  a:hover { color: #FF0000; } /* Hover link color */
+  a:focus { color: #00FF00; } /* Focus link color */
+  
+  /* Add external link icon for external links */
+  a[href^="http"]:after {
+    content: ''; /* Add content */
+    background: url(./Icon/external-link-icon-png-28.jpg); /* Path to the external link icon */
+    display: inline-block; /* Display as inline-block */
+    width: 16px; /* Set icon width */
+    height: 16px; /* Set icon height */
+    margin-left: 5px; /* Add margin to the left */
+    background-size: contain; /* Ensure the icon fits within the dimensions */
+  }
+  
+  /* List styles for sections and aside */
+  section ul, aside ul {
+    list-style-type: square; /* Use square bullets */
+  }
+  
+  /* Ordered list styles for sections */
+  section ol {
+    list-style: lower-alpha; /* Use lowercase letters for ordered lists */
+  }
+  
+  /* Navigation menu styles */
+  nav ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullet points */
+  }
+  
+  /* Navigation list item styles */
+  nav li {
+    padding: 10px; /* Add padding */
+  }
+  
+  /* Navigation link styles */
+  nav a {
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display as block element */
+    padding: 10px; /* Add padding */
+  }
+  
+  /* Navigation list item border and background styles */
+  nav ul li {
+    margin: 10px 0; /* Add margin */
+    padding: 10px; /* Add padding */
+    border: 2px solid #844242; /* Add border */
+    background-color: #d68e8e; /* Set background color */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  /* Hover and focus styles for navigation list items */
+  nav ul li:hover, nav ul li:focus {
+    background-color: #ddd; /* Change background color on hover/focus */
+  }
+  
+  /* Active state styles for navigation list items */
+  nav ul li:active {
+    background-color: #bbb; /* Change background color on active state */
+  }
