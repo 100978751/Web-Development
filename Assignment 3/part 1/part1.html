@@ -1,9 +1,9 @@
 <!--
-	Name: Sujay Tailor
-	File: part1.html
-	Date: 23 FEB 2025
-	In this code we are adding the internal css to the html file.
-	-->
+    Name: Sujay Tailor
+    File: part1.html
+    Date: 23 FEB 2025
+    Description: In this code, we are adding internal CSS to style a bio page.
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,11 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* Body styling: Sets the default font for the entire page */
         body {
             font-family: Arial, Helvetica, sans-serif;
-          }
-          
-          h1 {
+        }
+        
+        /* Level 1 heading styling: Pink color, dotted purple border-bottom, and left-aligned */
+        h1 {
             color: hotpink; /* Level 1 heading color */
             font-size: 2.5em;
             font-family: Georgia, "Times New Roman", Times, serif;
@@ -24,63 +26,76 @@
             text-align: left;
             margin-bottom: 20px;
         }
-          
-          h2 {
+        
+        /* Level 2 heading styling: Sets font size */
+        h2 {
             font-size: 1.5em;
-            
-          }
-          
-          .job-title{
+        }
+        
+        /* Job title styling: Grey color for the job title */
+        .job-title {
             color: grey;
-          }
-          .contact-info{
+        }
+
+        /* Contact info section styling: Purple border and padding */
+        .contact-info {
             border: 5px solid purple;
             padding: 5px;
-          }
-    
-            .contact-info ul {
-                list-style-type: none;
-                padding: 0;
-            }
-    
-            .contact-info ul li {
-                margin-bottom: 10px;
-            }
-    
-            .contact-info ul li a {
-                color: #fb6542;
-                text-decoration: none;
-            }
-    
-            .contact-info ul li a:hover {
-                color: green; /* Links turn green on hover */
-                text-decoration: underline;
-            }
+        }
+
+        /* Contact info list styling: Removes default list styling and padding */
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Contact info list item styling: Adds margin below each list item */
+        .contact-info ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact info link styling: Orange color for links, no underline */
+        .contact-info ul li a {
+            color: #fb6542;
+            text-decoration: none;
+        }
+
+        /* Contact info link hover styling: Green color and underline on hover */
+        .contact-info ul li a:hover {
+            color: green; /* Links turn green on hover */
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <!-- Level 1 heading: Name of the person -->
     <h1>Jane Doe</h1>
-<div class="job-title"><i>Web Developer</i></div>
-<p>
-  Far far away, behind the word mountains, far from the countries Vokalia and
-  Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-  right at the coast of the Semantics, a large language ocean.
-</p>
 
-<p>
-  A small river named Duden flows by their place and supplies it with the
-  necessary regelialia. It is a paradisematic country, in which roasted parts of
-  sentences fly into your mouth.
-</p>
+    <!-- Job title: Italicized text for the job title -->
+    <div class="job-title"><i>Web Developer</i></div>
 
-<div class="contact-info">
-    <h2>Contact information</h2>
-    <ul>
-        <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
-        <li>Web: <a href="http://example.com">http://example.com</a></li>
-        <li>Tel: 123 45678</li>
-    </ul>
-</div>
-    
+    <!-- First paragraph: Description of the person -->
+    <p>
+        Far far away, behind the word mountains, far from the countries Vokalia and
+        Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+        right at the coast of the Semantics, a large language ocean.
+    </p>
+
+    <!-- Second paragraph: Additional description -->
+    <p>
+        A small river named Duden flows by their place and supplies it with the
+        necessary regelialia. It is a paradisematic country, in which roasted parts of
+        sentences fly into your mouth.
+    </p>
+
+    <!-- Contact information section: Contains email, website, and phone number -->
+    <div class="contact-info">
+        <h2>Contact information</h2>
+        <ul>
+            <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
+            <li>Web: <a href="http://example.com">http://example.com</a></li>
+            <li>Tel: 123 45678</li>
+        </ul>
+    </div>
 </body>
 </html>
