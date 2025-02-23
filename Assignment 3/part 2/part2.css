@@ -2,3 +2,19 @@
 html {
     font-family: sans-serif;
   }
+  /* Base styles for the cool box */
+.cool-box {
+    width: 200px; /* Reasonable width for the box */
+    height: 150px; /* Reasonable height for the box */
+    background-color: #4CAF50; /* Base color for the design */
+    color: white; /* Contrasting color for the text */
+    font-size: 1.125rem; /* Slight increase in font size (1rem = 16px, so 1.125rem ≈ 18px) */
+    text-align: center; /* Center the text horizontally */
+    line-height: 150px; /* Center the text vertically by matching line-height to height */
+    border-radius: 8px; /* Subtle border radius */
+    border: 1px solid #388E3C; /* Slightly darker shade of the base color for the border */
+    position: absolute; /* Positioning for centering */
+    top: 50%; /* Centering vertically */
+    left: 50%; /* Centering horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+}
