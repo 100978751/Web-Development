@@ -60,3 +60,21 @@ nav ul {
     top: 0; /* Sticks to the top of the viewport */
     z-index: 1000; /* Ensures the nav stays above other content */
   }
+  /* Article and aside layout */
+.grid {
+    display: flex;
+    gap: 20px; /* Adds space between article and aside */
+  }
+  
+  article {
+    flex: 2; /* Article takes 2/3 of the space */
+  }
+  
+  aside {
+    flex: 1; /* Aside takes 1/3 of the space */
+  }
+  
+  .feature {
+    float: left; /* Wraps text around the image */
+    margin: 0 20px 20px 0; /* Adds spacing around the image */
+  }
