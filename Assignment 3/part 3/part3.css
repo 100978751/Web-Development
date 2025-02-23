@@ -42,4 +42,48 @@
     border-bottom: 5px solid #a66;
   }
   
-  /* WRITE YOUR CODE BELOW HERE */
+  /* Font and text styling */
+
+/* Fonts */
+@font-face {
+    font-family: 'SerifFont';
+    src: url('serif-font.woff2') format('woff2'),
+         url('serif-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SansSerifFont';
+    src: url('sans-serif-font.woff2') format('woff2'),
+         url('sans-serif-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SerifFont', serif; /* Apply serif font to body */
+}
+
+h1, h2 {
+    font-family: 'SansSerifFont', sans-serif; /* Apply sans-serif font to headings */
+    letter-spacing: 1px; /* Allow headings to breathe */
+}
+
+h1 {
+    font-size: 2.4rem; /* Larger font size for h1 */
+    text-align: center; /* Center the top-level heading */
+}
+
+h2 {
+    font-size: 1.8rem; /* Larger font size for h2 */
+}
+
+p {
+    letter-spacing: 0.5px; /* Letter spacing for body text */
+    word-spacing: 1px; /* Word spacing for body text */
+}
+
+section p:first-of-type {
+    text-indent: 20px; /* Indent first paragraph after each heading */
+}
