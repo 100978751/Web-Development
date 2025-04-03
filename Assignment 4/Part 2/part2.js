@@ -13,3 +13,17 @@ const imageAlts = {
   'pic4.jpg': 'Section of wall from a pharaoh\'s tomb',
   'pic5.jpg': 'Large moth on a leaf'
 };
+
+// === Part 3: Create Thumbnails ===
+for (const filename of imageFilenames) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', filename); // Because images are in the same folder
+    newImage.setAttribute('alt', imageAlts[filename]);
+    thumbBar.appendChild(newImage);
+  
+    // === Part 4: Thumbnail Click Event ===
+    newImage.addEventListener('click', () => {
+      displayedImage.src = newImage.src;
+      displayedImage.alt = newImage.alt;
+    });
+  }
