@@ -162,3 +162,8 @@ class EvilCircle extends Shape {
       }
     }
   }
+
+  // === Part 4: Update Ball Class for Existence Tracking ===
+for (const ball of balls) {
+    ball.exists = true;
+  }
