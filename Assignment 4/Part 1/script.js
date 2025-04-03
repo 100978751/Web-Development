@@ -13,3 +13,5 @@ const storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. W
 const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
+// === Part 3: EVENT LISTENER AND FUNCTION TRIGGER ===
+randomize.addEventListener('click', result);
