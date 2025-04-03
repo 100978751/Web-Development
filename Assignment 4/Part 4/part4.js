@@ -167,3 +167,34 @@ class EvilCircle extends Shape {
 for (const ball of balls) {
     ball.exists = true;
   }
+
+  // === Part 5: Score Counter and Enhanced Loop ===
+const ballCountDisplay = document.getElementById("ballCount");
+let ballCount = balls.length;
+ballCountDisplay.textContent = ballCount;
+
+const evil = new EvilCircle(
+  random(0, width),
+  random(0, height)
+);
+
+function enhancedLoop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (const ball of balls) {
+    if (ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
+  }
+
+  evil.draw();
+  evil.checkBounds();
+  evil.collisionDetect();
+
+  requestAnimationFrame(enhancedLoop);
+}
+
+enhancedLoop();
