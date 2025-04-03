@@ -21,9 +21,9 @@ for (const filename of imageFilenames) {
     newImage.setAttribute('alt', imageAlts[filename]);
     thumbBar.appendChild(newImage);
   
-    // === Part 4: Thumbnail Click Event ===
-    newImage.addEventListener('click', () => {
-      displayedImage.src = newImage.src;
-      displayedImage.alt = newImage.alt;
-    });
-  }
+   // === Part 4: Thumbnail Click Event ===
+  newImage.addEventListener('click', () => {
+    displayedImage.src = newImage.src;
+    displayedImage.alt = newImage.alt;
+  });
+}
